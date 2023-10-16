@@ -1,4 +1,4 @@
-# IrriPi
+# Arrosage Automatique
 
 A raspberry pi project to automate my irrigation system mainly based on a raspberrypi and rain bird dv100 24vac solenoid valves  
 
@@ -11,7 +11,7 @@ This is the first working version for summer 2023, it will be adapted for 2024.
 
  - Logic is done by python scripts on the rpi
  - Data management is done with an sql data base, mqtt, json, yaml
- - UI is based on a web application
+ - UI is based on a web application or in Home Assistant
  - Sensors data comes from home-assistant/esphome
 
  **Overall functional descriptions :**
@@ -63,7 +63,7 @@ Gpio 14-15 are reserved and cannot be used !
 
 **Functional Diagram :**
 
-![Functional_Diagram](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/irripi.png?raw=true)
+![Functional_Diagram](https://github.com/NicoDupont/Arrosage-Automatique/blob/main/doc/irripi.png)
 
 **Electric Parts**
 
@@ -84,19 +84,19 @@ Gpio 14-15 are reserved and cannot be used !
 - 1x lcd 20x4 i2c 5v
 - 1x rtc module DS3231 i2c 5v
 
-![Electronics_Box](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/electronics_box.jpg)
-![Electronics_Box](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/electronics_box2.jpg)
+![Electronics_Box](https://github.com/NicoDupont/Arrosage-Automatique/blob/main/doc/electronics_box.jpg)
+![Electronics_Box](https://github.com/NicoDupont/Arrosage-Automatique/blob/main/doc/electronics_box2.jpg)
 
 
 **Web App :**
 
 The web app  :  
 
-![web app irripi](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/webapp1.png)
+![web app irripi](https://github.com/NicoDupont/Arrosage-Automatique/blob/main/doc/webapp1.png)
 
 **Schematic :**
 
-![fritzing irripi rpi](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/frtitzing1.png)
+![fritzing irripi rpi](https://github.com/NicoDupont/Arrosage-Automatique/blob/main/doc/irripi_bb.png)
 
 **Side projects (in progress) :**
 - Tank filling with esphome and home-assistant [link](https://github.com/NicoDupont/esp_remplissage_cuve)
@@ -119,6 +119,6 @@ The web app  :
 
 **Integration in [Home-Assistant](https://www.home-assistant.io/)** **
 
-![Home-Assistant lovelace](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/Doc/lovelace.png)
+![Home-Assistant lovelace](https://github.com/NicoDupont/Arrosage-Automatique/blob/main/doc/lovelace.png)
 
 
