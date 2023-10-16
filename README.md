@@ -33,8 +33,8 @@ This is the first working version for summer 2023, it will be adapted for 2024.
 
 	| IrriPi
 	  => | App ( SqlDatabase and WebApp(php,html,css,js) )
-	     | Docs    (img / Schematic / Diagram / Fritzing parts / Useful docs for the project )  
-         | Raspberry (python scripts)
+	     | Doc    (img / Schematic / Diagram / Fritzing parts / Useful docs for the project )  
+         | rpi (python scripts)
 	     readme.md
 
 **Raspberry Pi requirements :** 
@@ -63,7 +63,7 @@ Gpio 14-15 are reserved and cannot be used !
 
 **Functional Diagram :**
 
-![Functional_Diagram](https://github.com/NicoDupont/IrriPi/blob/master/Img/irripi.png?raw=true)
+![Functional_Diagram](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/irripi.png?raw=true)
 
 **Electric Parts**
 
@@ -84,19 +84,19 @@ Gpio 14-15 are reserved and cannot be used !
 - 1x lcd 20x4 i2c 5v
 - 1x rtc module DS3231 i2c 5v
 
-![Electronics_Box](https://github.com/NicoDupont/IrriPi/blob/master/Doc/electronics_box.jpg)
-![Electronics_Box](https://github.com/NicoDupont/IrriPi/blob/master/Doc/electronics_box2.jpg)
+![Electronics_Box](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/electronics_box.jpg)
+![Electronics_Box](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/electronics_box2.jpg)
 
 
 **Web App :**
 
 The web app  :  
 
-![web app irripi](https://github.com/NicoDupont/IrriPi/blob/master/Doc/webapp1.PNG)
+![web app irripi](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/webapp1.png)
 
 **Schematic :**
 
-![fritzing irripi rpi](https://github.com/NicoDupont/IrriPi/blob/master/Img/frtitzing1.png)
+![fritzing irripi rpi](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/doc/frtitzing1.png)
 
 **Side projects (in progress) :**
 - Tank filling with esphome and home-assistant [link](https://github.com/NicoDupont/esp_remplissage_cuve)
@@ -119,6 +119,6 @@ The web app  :
 
 **Integration in [Home-Assistant](https://www.home-assistant.io/)** **
 
-![Home-Assistant lovelace](https://github.com/NicoDupont/IrriPi/blob/master/Doc/lovelace.png)
+![Home-Assistant lovelace](https://github.com/NicoDupont/Arrosage-Automatique/blob/master/Doc/lovelace.png)
 
 
