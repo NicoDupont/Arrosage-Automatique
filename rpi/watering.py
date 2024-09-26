@@ -1,203 +1,144 @@
 """
 * -----------------------------------------------------------------------------------
-* Last update :   12/09/2023
-* Irripi
-* Part managing the opening or closing of the solenoid valves
+* Last update :   17/06/2024
+* Arrosage Automatique / IrriPi
+* Function managing the opening or closing of solenoid valves (via gpio)
 * -----------------------------------------------------------------------------------
 """
 
-import  time
-from function import IsTof,IsHst,CloseRelay,OpenRelay,IsInProgrammation,UpdateStatus,LogData,Print2Lcd
-#import lcddriver 
+import time
+from function import IsTof,IsHst,CloseRelay,OpenRelay,IsProgrammed,UpdateStatus,LogDatabase
 
-def Watering(iteration,data_n_active,data_zone,data_g_param,rpi_number,date,debug,log,lcd,lcdscreen,lcdsleep,name,version,dateversion):
+def Watering(iteration,critical_anomaly,zone_inactive,zone_active,global_settings,rpi_number,actual_date,logger) -> None:
     
-    #if lcdscreen:
-    #    lcd = lcddriver.lcd()
-    
-    data_active = data_zone  
-  
     # global parameters for irrigation
-    for index, row in data_g_param.iterrows():
-        test_duration = row["duree_test"]
-        mode = row["mode"]
+    test_duration = global_settings["duree_test"].iloc[0]
+    mode = global_settings["mode"].iloc[0]
     
-    if 1==1:    
-        # --------------------------------
-        # --------------------------------
-        # deactivation of solenoid valves which are not in the sequence / active
-        if lcdscreen:
-            Print2Lcd(lcd,lcdsleep,True,"{0} {1} {2}".format(name,version,dateversion),"Desactivation Zone :","Zones Non Active","")
-
-        for index, row in data_n_active.iterrows():
-            sv = row["sv"]
-            gpio = row["gpio"]
-            rpi_relay = row["rpi"]
-            open = row["open"]
-            # if solenoid valve is open :
-            if rpi_number == rpi_relay:
-                if IsHst(gpio) == False or open == 1:
-                    UpdateStatus(sv,0,debug) 
-                    if not data_active.empty:
-                        OpenRelay(gpio,debug)
-                        if log:
-                            LogData(date,sv,gpio,'Non Active','Désactivation',debug)
-                        print("Deactivation of the non-active solenoid valve : "+sv)
-                        #time.sleep(0.5)                  
+    for index, row in zone_inactive.iterrows():
+        sv = row["sv"]
+        gpio = row["gpio"]
+        rpi_relay = row["rpi"]
+        open = row["open"]
+        # if solenoid valve is open :
+        if rpi_number == rpi_relay:
+            if IsHst(gpio) == False or open == 1:
+                UpdateStatus(sv,0,logger) 
+                if not zone_active.empty:
+                    OpenRelay(gpio,logger)
+                    LogDatabase(sv,gpio,'Non Active','Désactivation','sv',logger)
+                    logger.debug("Deactivation of the non-active solenoid valve : "+sv)
                                            
-        # --------------------------------
-        # Deactivation of all solenoid valves on 1st launch / if restart unexpectedly  
-        if iteration == 1:
-            if lcdscreen:
-                Print2Lcd(lcd,lcdsleep,False,"","1er demarrage :","Desactivation Zone :","Zone Active : - ")           
-            for index, row in data_active.iterrows():
+    # --------------------------------
+    # Deactivation of all solenoid valves on 1st launch / if restart unexpectedly  or criticval anomaly detected
+    if iteration == 1 or mode in ['Stop','Hivernage'] or critical_anomaly == True:         
+        for index, row in zone_active.iterrows():
+            gpio = row["gpio"]
+            sv = row["sv"]
+            rpi_relay = row["rpi"]
+            sv_state = row["open"]
+            if rpi_number == rpi_relay:
+                if IsHst(gpio) == False or sv_state == 1:
+                    OpenRelay(gpio,logger)
+                    UpdateStatus(sv,0,logger) 
+                    if iteration==1:
+                        text1 = 'First Start'
+                        text2 = 'Deactivation of the solenoid valve on first start : '
+                    else: 
+                        if critical_anomaly:
+                            text1 = 'Critical Anomaly'
+                            text2 = 'Deactivation of the solenoid valve on Critical Anomaly : '
+                        else:
+                            if mode in ['Stop','Hivernage']:
+                                text1 = 'Stop'
+                                text2 = 'Deactivation of the solenoid valve on Stop Mode : '
+                    LogDatabase(sv,gpio,text1,'Désactivation','sv',logger)
+                    logger.info(text2+sv)
+    else:
+
+        if mode == 'Test':
+            logger.info("Start Test Mode")
+            #Tout desactiver avant test
+            for index, row in zone_active.iterrows():
                 gpio = row["gpio"]
                 sv = row["sv"]
                 rpi_relay = row["rpi"]
-                open = row["open"]
+                sv_state = row["open"]
                 if rpi_number == rpi_relay:
-                    if IsHst(gpio) == False or open == 1:
-                        OpenRelay(gpio,debug)
-                        UpdateStatus(sv,0,debug) 
-                        if log:
-                            LogData(date,sv,gpio,'First Start','Désactivation',debug)
-                        print("Deactivation of the solenoid valve on first start: "+sv)
-                        #time.sleep(0.5)
+                    if IsHst(gpio) == False and IsTof(sv_state) == False:
+                        OpenRelay(gpio,logger)
+                        UpdateStatus(sv,0,logger) 
+                        LogDatabase(sv,gpio,"Test",'1st Désactivation','sv',logger) 
+                        logger.info("Désactivation : {0} avant test".format(sv)) 
+                        time.sleep(1)       
+            for index, row in zone_active.iterrows():
+                gpio = row["gpio"]
+                sv = row["sv"]
+                rpi_relay = row["rpi"]
+                sv_state = row["open"]
+                if rpi_number == rpi_relay:
+                    if IsHst(gpio) == True:
+                        CloseRelay(gpio,logger)
+                        UpdateStatus(sv,1,logger)
+                        LogDatabase(sv,gpio,'Test','Activation','sv',logger) 
+                        logger.info("Test Solenoid : {0} for {1} seconds".format(sv,test_duration))
+                    time.sleep(test_duration)
+                    OpenRelay(gpio,logger)
+                    UpdateStatus(sv,0,logger) 
+                    LogDatabase(sv,gpio,'Test','Désactivation','sv',logger)
+                    time.sleep(0.1)
+            logger.info("Ending Test Mode") 
+    
 
-        # --------------------------------
-        # --------------------------------
-        # --------------------------------
-        #main part open / close relay 
-        else:
-        # test operation
-            if mode == 'Test':
-                print("-------------------------------")
-                print("test operation :")
-                if lcdscreen:
-                    Print2Lcd(lcd,lcdsleep,False,"","Mode : Test"," "," ")
-                
-                for index, row in data_active.iterrows():
-                    gpio = row["gpio"]
-                    sv = row["sv"]
-                    rpi_relay = row["rpi"]
-                    open = row["open"]
-                    if rpi_number == rpi_relay:
-                        # force desactivation of all solenoids
-                        if IsHst(gpio) == False or open == 1:
-                            OpenRelay(gpio,debug)
-                            UpdateStatus(sv,0,debug) 
-                            if log:
-                                LogData(date,sv,gpio,'Test','Désactivation',debug)
-                            #time.sleep(0.5)
-                
-                for index, row in data_active.iterrows():
-                    gpio = row["gpio"]
-                    sv = row["sv"]
-                    rpi_relay = row["rpi"]
-                    open = row["open"]
-                    if rpi_number == rpi_relay:
-                        if IsHst(gpio) == True:
-                            CloseRelay(gpio,debug)
-                            UpdateStatus(sv,1,debug)
-                            if lcdscreen:
-                                lcd.lcd_display_string(" Zone Active : {0} ".format(sv), 3)
-                                Print2Lcd(lcd,lcdsleep,False,"","Mode : Test","Zone Active : {0}".format(sv),"Pour {0} secondes".format(test_duration))
-                            if log:
-                                LogData(date,sv,gpio,'Test','Activation',debug) 
-                            print("Test Solenoid : {0} for {1} seconds".format(sv,test_duration))
-                        time.sleep(test_duration)
-                        OpenRelay(gpio,debug)
-                        UpdateStatus(sv,0,debug) 
+        if mode in ['Manuel','Domotique']:
+            for index, row in zone_active.iterrows():
+                gpio = row["gpio"]
+                sv = row["sv"]
+                sv_state = row["open"]
+                rpi_relay = row["rpi"]                       
+                if rpi_number == rpi_relay:
+                    if IsHst(gpio) == False and IsTof(sv_state) == False:
+                        if not zone_active.empty:
+                            OpenRelay(gpio,logger)
+                            UpdateStatus(sv,0,logger)
+                            LogDatabase(sv,gpio,'Manuel','Désactivation','sv',logger) 
+                            logger.info("Manual deactivation Solenoid valve : "+sv)      
+                            time.sleep(1)
+                    # log sv already open    
+                    if IsHst(gpio) == False and IsTof(sv_state) == True:
+                        logger.debug("Solenoid valve already opened manually : "+sv) 
+                    # open sv    
+                    if IsHst(gpio) == True and IsTof(sv_state) == True:
+                        time.sleep(1)
+                        CloseRelay(gpio,logger)
+                        UpdateStatus(sv,1,logger)
+                        LogDatabase(sv,gpio,'Manuel','Activation','sv',logger)
+                        logger.info("Manual activation Solenoid valve : "+sv)
                         
-                        if lcdscreen:
-                            lcd.lcd_display_string(" Zone Active : - ", 3)
-                            Print2Lcd(lcd,lcdsleep,False,"","Mode : Test","Zone Active : --"," ")
-                        if log:
-                            LogData(date,sv,gpio,'Test','Désactivation',debug)
-                        #time.sleep(0.5)
-  
-            else:
-                # --------------------------------
-                # Manual operation :
-                if mode == 'Manuel' or mode == 'Domotique':
-                    if lcdscreen:
-                        Print2Lcd(lcd,lcdsleep,False,"","Mode : Manuel"," "," ")
-                    for index, row in data_active.iterrows():
-                        gpio = row["gpio"]
-                        sv = row["sv"]
-                        open = row["open"]
-                        rpi_relay = row["rpi"]                       
-                        if rpi_number == rpi_relay:
-                            # close sv
-                            if IsHst(gpio) == False and IsTof(open) == False:
-                                if not data_active.empty:
-                                    OpenRelay(gpio,debug)
-                                    UpdateStatus(sv,0,debug)
-                                    if log:
-                                        LogData(date,sv,gpio,'Manuel','Désactivation',debug)   
-                                time.sleep(0.5)
-                                print("Manual deactivation Solenoid valve : "+sv)
-                            # log sv already open    
-                            if IsHst(gpio) == False and IsTof(open) == True:
-                                #CloseRelay(gpio,debug)
-                                #UpdateStatus(sv,1,debug) 
-                                #time.sleep(0.5)
-                                print("Solenoid valve already opened manually : "+sv)
-                            # open sv    
-                            if IsHst(gpio) == True and IsTof(open) == True:
-                                time.sleep(0.5)
-                                CloseRelay(gpio,debug)
-                                UpdateStatus(sv,1,debug)
-                                if log:
-                                    LogData(date,sv,gpio,'Manuel','Activation',debug)
-                                print("Manual activation Solenoid valve : "+sv)
-                    
-                # --------------------------------
-                # --------------------------------
-                # Automatic operation
-                else: 
-                    if mode == 'Auto':
-                        if lcdscreen:
-                            Print2Lcd(lcd,lcdsleep,False,"","Mode : Automatique"," "," ")  
-                        for index, row in data_active.iterrows():
-                            gpio = row["gpio"]
-                            open = row["open"]
-                            sv = row["sv"]
-                            sd = row["StartingDate"]
-                            ed = row["EndDate"]
-                            even = row["even"]
-                            odd = row["odd"]
-                            monday = row["monday"]
-                            tuesday = row["tuesday"]
-                            wednesday = row["wednesday"]
-                            thursday = row["thursday"]
-                            friday = row["friday"]
-                            saturday = row["saturday"]
-                            sunday = row["sunday"]
-                            rpi_relay = row["rpi"]
 
-                            if rpi_number == rpi_relay:
-                                InProgrammation = IsInProgrammation(sv,sd,ed,date,even,odd,monday,tuesday,wednesday,thursday,friday,saturday,sunday,debug)
-                                # close sv
-                                if IsHst(gpio) == False and InProgrammation == False:
-                                    if not data_active.empty or open == 1:
-                                        OpenRelay(gpio,debug)
-                                        UpdateStatus(sv,0,debug) 
-                                        if log:
-                                            LogData(date,sv,gpio,'Auto','Désactivation',debug) 
-                                    time.sleep(0.5)
-                                    print("Solenoid valve programming deactivation : "+sv)
-                                # sv already open 
-                                if IsHst(gpio) == False and InProgrammation == True :
-                                    #CloseRelay(gpio,debug)
-                                    #UpdateStatus(sv,1,debug) 
-                                    #time.sleep(0.2)
-                                    print("Solenoid valve already open : "+sv)
-                                # open sv
-                                if IsHst(gpio) == True and InProgrammation == True :
-                                    time.sleep(0.5)
-                                    CloseRelay(gpio,debug)
-                                    UpdateStatus(sv,1,debug)
-                                    if log:
-                                        LogData(date,sv,gpio,'Auto','Activation',debug)
-                                    print("Solenoid valve programming activation : "+sv) 
+        if mode in ['Auto','Demande']:
+            for index, row in zone_active.iterrows():
+                gpio = row["gpio"]
+                sv_state = row["open"]
+                sv = row["sv"]
+                rpi_relay = row["rpi"]
+                if rpi_number == rpi_relay:
+                    InProgrammation = IsProgrammed(sv,row["StartingDate"],row["EndDate"],actual_date,row["even"],row["odd"],row["monday"],row["tuesday"],row["wednesday"],row["thursday"],row["friday"],row["saturday"],row["sunday"],False,logger)
+                    # close sv
+                    if IsHst(gpio) == False and InProgrammation == False:
+                        if not zone_active.empty or sv_state == 1:
+                            OpenRelay(gpio,logger)
+                            UpdateStatus(sv,0,logger) 
+                            LogDatabase(sv,gpio,'Auto','Désactivation','sv',logger) 
+                            logger.info("Solenoid valve programming deactivation : "+sv)
+                            time.sleep(1)
+                    # sv already open 
+                    if IsHst(gpio) == False and InProgrammation == True :
+                        logger.debug("Solenoid valve already open : "+sv)
+                    # open sv
+                    if IsHst(gpio) == True and InProgrammation == True :
+                        time.sleep(1)
+                        CloseRelay(gpio,logger)
+                        UpdateStatus(sv,1,logger)
+                        LogDatabase(sv,gpio,'Auto','Activation','sv',logger)
+                        logger.info("Solenoid valve programming activation : "+sv) 

@@ -1,0 +1,2910 @@
+2024-06-03 20:37:50,979 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:37:51,533 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,583 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,589 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,599 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,603 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,608 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,642 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,648 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:51,652 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:52,391 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:37:52,480 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:52,484 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:52,499 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:52,503 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:52,517 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:53,165 - ERROR - MqttProgZone - Erreur MqttProgZone
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 360, in MqttProgZone
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:37:53,237 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:37:53,241 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:53,799 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:38:54,036 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,044 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,050 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,057 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,061 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,066 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,098 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,104 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,107 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,539 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:38:54,568 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,572 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,575 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,579 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:54,582 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:55,000 - ERROR - MqttProgZone - Erreur MqttProgZone
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 360, in MqttProgZone
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:38:55,009 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:38:55,012 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,537 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:39:55,786 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,795 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,802 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,809 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,813 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,818 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,852 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,858 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:55,862 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:56,333 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:39:56,368 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:56,373 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:56,377 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:56,381 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:56,385 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:56,853 - ERROR - MqttProgZone - Erreur MqttProgZone
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 360, in MqttProgZone
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:39:56,863 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:39:56,867 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,400 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:40:57,644 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,654 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,660 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,667 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,671 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,676 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,710 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,716 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:57,720 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:58,203 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:40:58,235 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:58,239 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:58,243 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:58,248 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:58,251 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:58,685 - ERROR - MqttProgZone - Erreur MqttProgZone
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 360, in MqttProgZone
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:40:58,694 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:40:58,697 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,154 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:41:59,397 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,406 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,412 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,419 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,423 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,428 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,463 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,470 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:41:59,474 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:42:00,160 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 484, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:42:00,225 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:42:00,240 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:42:00,244 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:42:00,259 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:42:00,277 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:42:00,760 - ERROR - MqttProgZone - Erreur MqttProgZone
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 574, in open_connection
+    self.sock.connect(sockaddr)
+OSError: [Errno 101] Network is unreachable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+mysql.connector.errors.InterfaceError: 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 360, in MqttProgZone
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 350, in _open_connection
+    self._socket.open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/network.py", line 580, in open_connection
+    _strioerror(err),
+sqlalchemy.exc.InterfaceError: (mysql.connector.errors.InterfaceError) 2003: Can't connect to MySQL server on '192.168.1.123:3306' (101 Network is unreachable)
+(Background on this error at: https://sqlalche.me/e/14/rvf5)
+2024-06-03 20:42:00,773 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable
+2024-06-03 20:42:00,778 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 153, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+OSError: [Errno 101] Network is unreachable

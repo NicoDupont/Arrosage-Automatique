@@ -1,5 +1,5 @@
 body {
-  background-color:#455A64;
+  background-color:#979494;
   font-family: "Lato",monospace;
   font-style: normal;
   font-weight: 600;
@@ -37,6 +37,12 @@ ul{
   text-align: right;
 }
 
+#kpi {
+  text-align: center;
+  font-size: 50px;
+  vertical-align: middle;
+    margin-top: 20%;
+}
 
 /*Données pression*/
 
@@ -117,7 +123,53 @@ td.value {
 
 }
 
+#eventszone{
+  font-size: 15px;
+  font-weight: 800;
+  padding-inline-start: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+#eventsother{
+  font-size: 15px;
+  font-weight: 800;
+  padding-inline-start: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+
+#seq{
+  font-size: 15px;
+  font-weight: 800;
+  padding-inline-start: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+#sequence{
+  font-size: 15px;
+  font-weight: 800;
+  padding-inline-start: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
 .lizone{
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border:solid;
+  border-color: #b88989;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  padding-left: 4px;
+  padding-right: 15px;
+  
+}
+
+.liseq{
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border:solid;
@@ -152,7 +204,13 @@ div#foot {
 
 div#esphome {
   float: left;
-  width: 30%;
+  width: 20%;
+  text-align: center;
+}
+
+div#mqtt {
+  float: left;
+  width: 20%;
   text-align: center;
 }
 
@@ -165,7 +223,7 @@ div#plus {
 
 div#rpi {
     float: left;
-    width: 30%;
+    width: 20%;
     text-align: center;
   }
 

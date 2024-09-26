@@ -11,17 +11,6 @@
     {
         die('Erreur : '.$e->getMessage());
     }
-    // select data
-    /*
-    if (isset($_GET["idsv"]) && $_GET["typesv"] ){
-        $sv = $_GET["idsv"];
-        $typesv = $_GET["typesv"];
-        if ($typesv == 'zone'){
-            $qry = $bdd->prepare("select * from Zone where id_sv='".$sv."' order by `order`,sv;");
-        }else{
-            $qry = $bdd->prepare("select * from Zone where id_sv='".$sv."' order by `order`,sv;");
-        }
-    */
     if (isset($_GET["idsv"]) ){
          $qry = $bdd->prepare("select * from Zone where id_sv='".$_GET["idsv"]."' order by `order`,sv;");  
     }else{
@@ -31,4 +20,7 @@
     $data = $qry->fetchAll(PDO::FETCH_ASSOC);
     $jsondata = json_encode($data);
     echo $jsondata;
+    $data = null;
+    $qry = null;
+    $bdd = null;
 ?>

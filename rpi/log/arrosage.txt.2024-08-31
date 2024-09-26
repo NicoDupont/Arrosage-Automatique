@@ -1,0 +1,12 @@
+2024-08-31 11:26:23,193 - INFO - Watering - Manual activation Solenoid valve : Z18
+2024-08-31 11:26:39,781 - INFO - Watering - Manual activation Solenoid valve : Z14
+2024-08-31 11:28:28,892 - INFO - Watering - Manual activation Solenoid valve : Z2
+2024-08-31 11:29:34,507 - INFO - Watering - Manual deactivation Solenoid valve : Z2
+2024-08-31 11:29:36,539 - INFO - Watering - Manual deactivation Solenoid valve : Z14
+2024-08-31 11:29:38,557 - INFO - Watering - Manual deactivation Solenoid valve : Z18
+2024-09-01 05:19:56,838 - INFO - Watering - Solenoid valve programming activation : Z2
+2024-09-01 05:19:58,865 - INFO - Watering - Solenoid valve programming activation : Z14
+2024-09-01 05:20:00,911 - INFO - Watering - Solenoid valve programming activation : Z18
+2024-09-01 06:28:05,851 - INFO - Watering - Solenoid valve programming deactivation : Z2
+2024-09-01 06:28:07,885 - INFO - Watering - Solenoid valve programming deactivation : Z14
+2024-09-01 06:28:09,920 - INFO - Watering - Solenoid valve programming deactivation : Z18

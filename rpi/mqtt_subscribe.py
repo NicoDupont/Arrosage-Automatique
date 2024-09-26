@@ -1,217 +1,135 @@
 """
 * -----------------------------------------------------------------------------------
-* Last update :  06/09/2023
-* Project Irripi
-* Tache de récupération des données depuis mqtt pour maj la bdd
-* Le programme doit tourner en fond
+* Last update :  10/06/2024
+* Arrosage Automatique
+* Tache de récupération des données depuis mqtt pour maj la bdd (topics update from mosquito brocker)
+* lister les topics + boucle sur txt / yaml / json ?
 * -----------------------------------------------------------------------------------
 """
 
 import paho.mqtt.client as mqtt
 import yaml
+import json
 from sqlalchemy import create_engine 
+import logging
+from function import ConfigLogging,GetDayTime,RestartRpi,UpdateData,LogDatabase,LaunchTestRelais
 
-#---------------------------------------
-#---------------------------------------
-# parametres
-CONFIG_FILE = 'config.yaml'
+if __name__ == '__main__':
+	#---------------------------------------
+	# parametres
+	CONFIG_FILE = 'config.yaml'
 
-with open(CONFIG_FILE) as f:
-    config = yaml.load(f, Loader=yaml.FullLoader)
- 
-IP_BDD_SERVER = config['p_ip_bdd']
-USER_BDD = config['p_user_bdd']
-PASSWORD_BDD = config['p_password_bdd']
-NAME_DATABASE = config['p_database']
-IP_MQTT_BROKER = config['p_ip_mqtt']
-USER_MQTT = config['p_user_mqtt']
-PASSWORD_MQTT = config['p_password_mqtt']
-PORT_MQTT = config['p_port_mqtt']   
-DEBUG = config['p_debug']    
-DEBUG = False   
+	with open(CONFIG_FILE) as f:
+		config = yaml.load(f, Loader=yaml.FullLoader)
+	
+	IP_BDD_SERVER = config['p_ip_bdd']
+	USER_BDD = config['p_user_bdd']
+	PASSWORD_BDD = config['p_password_bdd']
+	NAME_DATABASE = config['p_database']
+	IP_MQTT_BROKER = config['p_ip_mqtt']
+	USER_MQTT = config['p_user_mqtt']
+	PASSWORD_MQTT = config['p_password_mqtt']
+	PORT_MQTT = config['p_port_mqtt']
+	LOG_LEVEL_STREAM = config['p_log_level_stream']   # log level to be write like print  NOTSET | DEBUG | INFO | WARNING | ERROR | CRITICAL
+	LOG_LEVEL_FILE = config['p_log_level_file']       # log level to be write in log file  NOTSET | DEBUG | INFO | WARNING | ERROR | CRITICAL
+	FILE_TOPIC_MQTT = config['p_topics_mqtt']
+	PREFIX_MQTT= config['P_prefix_mqtt']    
+	DEVICE_MQTT= config['p_device_mqtt']    
+	#--------------------------------------
+	#initialise logging config
+	actual_day = GetDayTime(0)
+	logger = logging.getLogger(__name__)#.addHandler(logging.NullHandler())
+	#logfile = "log/mqtt_subscribe"+str(actual_day.day)+"_"+str(actual_day.month)+"_" +str(actual_day.year)+".txt"
+	logfile = "log/mqtt_subscribe.txt"
+	ConfigLogging(logger,logfile,LOG_LEVEL_STREAM,LOG_LEVEL_FILE,True)
 
-topic_field_param = {"ha/arrosage/parametre/mode":"mode", 
-                   "ha/arrosage/parametre/source_arrosage":"source",
-                   "ha/arrosage/parametre/heure_debut_sequence":"heure_debut_sequence",
-                   "ha/arrosage/parametre/heure_debut_sequence_demande":"heure_debut_sequence_demande",
-                   "ha/arrosage/parametre/duree_test":"duree_test",
-                   "ha/arrosage/parametre/duree_coef":"duree_coef",
-                   "ha/arrosage/parametre/pression_seuil_haut":"pression_seuil_haut",
-                   "ha/arrosage/parametre/pression_seuil_bas":"pression_seuil_bas",
-                   "ha/arrosage/parametre/delta_pression_filtre_max":"delta_pression_filtre_max",
-                   "ha/arrosage/parametre/gestion_cuve":"gestion_cuve",
-                   "ha/arrosage/parametre/test_pression_canal":"test_pression_canal",
-                   "ha/arrosage/parametre/test_pression_cuve":"test_pression_cuve",
-                   "ha/arrosage/parametre/test_pression_ville":"test_pression_ville",
-                   "ha/arrosage/parametre/nb_cuve_ibc":"nb_cuve_ibc",
-                   "ha/arrosage/parametre/nb_litre_cuve_ibc":"nb_litre_cuve_ibc",
-                   "ha/arrosage/parametre/seuil_min_capacite_cuve":"seuil_min_capacite_cuve",
-                   "ha/arrosage/parametre/seuil_max_capacite_cuve":"seuil_max_capacite_cuve",
-                   "ha/arrosage/parametre/test_hauteur_eau_cuve":"test_hauteur_eau_cuve",
-                   "ha/arrosage/parametre/seuil_capacite_remplissage_auto_cuve":"seuil_capacite_remplissage_auto_cuve",
-                   "ha/arrosage/parametre/minute_debut_sequence": "minute_debut_sequence",
-                   "ha/arrosage/parametre/minute_debut_sequence_demande": "minute_debut_sequence_demande"
-                   }
+	#mqtt_logger = logging.getLogger("MqttCon")
 
-topic_etat_zone = {"ha/arrosage/Z1/etat":"Z1", 
-                   "ha/arrosage/Z2/etat":"Z2",
-                   "ha/arrosage/Z3/etat":"Z3", 
-                   "ha/arrosage/Z4/etat":"Z4",
-                   "ha/arrosage/Z5/etat":"Z5", 
-                   "ha/arrosage/Z6/etat":"Z6",
-                   "ha/arrosage/Z7/etat":"Z7", 
-                   "ha/arrosage/Z8/etat":"Z8",
-                   "ha/arrosage/Z9/etat":"Z9", 
-                   "ha/arrosage/Z10/etat":"Z10",
-                   "ha/arrosage/Z11/etat":"Z11", 
-                   "ha/arrosage/Z12/etat":"Z12",
-                   "ha/arrosage/Z13/etat":"Z13", 
-                   "ha/arrosage/Z14/etat":"Z14",
-                   "ha/arrosage/Z15/etat":"Z15", 
-                   "ha/arrosage/Z16/etat":"Z16",
-                   "ha/arrosage/Z17/etat":"Z17", 
-                   "ha/arrosage/Z18/etat":"Z18",
-                   "ha/arrosage/Z19/etat":"Z19", 
-                   "ha/arrosage/Z20/etat":"Z20",
-                   "ha/arrosage/Z21/etat":"Z21", 
-                   "ha/arrosage/Z22/etat":"Z22"
-                   }
+	f = open(FILE_TOPIC_MQTT)
+	topics = json.load(f)
+	f.close()
 
-topic_active_zone = {"ha/arrosage/Z1/active":"Z1", 
-                   "ha/arrosage/Z2/active":"Z2",
-                   "ha/arrosage/Z3/active":"Z3", 
-                   "ha/arrosage/Z4/active":"Z4",
-                   "ha/arrosage/Z5/active":"Z5", 
-                   "ha/arrosage/Z6/active":"Z6",
-                   "ha/arrosage/Z7/active":"Z7", 
-                   "ha/arrosage/Z8/active":"Z8",
-                   "ha/arrosage/Z9/active":"Z9", 
-                   "ha/arrosage/Z10/active":"Z10",
-                   "ha/arrosage/Z11/active":"Z11", 
-                   "ha/arrosage/Z12/active":"Z12",
-                   "ha/arrosage/Z13/active":"Z13", 
-                   "ha/arrosage/Z14/active":"Z14",
-                   "ha/arrosage/Z15/active":"Z15", 
-                   "ha/arrosage/Z16/active":"Z16",
-                   "ha/arrosage/Z17/active":"Z17", 
-                   "ha/arrosage/Z18/active":"Z18",
-                   "ha/arrosage/Z19/active":"Z19", 
-                   "ha/arrosage/Z20/active":"Z20",
-                   "ha/arrosage/Z21/active":"Z21", 
-                   "ha/arrosage/Z22/active":"Z22"
-                   }
+	list_topics = []
+	for subpart in topics:
+		for type_topic, listtopic in subpart.items():
+			for value in listtopic:
+				logger.debug("partie {0} topics : {1} bdd : {2} table : {3}".format(type_topic,value['topic'],value['field'],value['table']))
+				list_topics.append(tuple([type_topic,PREFIX_MQTT+"/"+DEVICE_MQTT+"/"+value['topic'],value['field'],value['table']]))
+	logger.debug("Topic settings :")
 
-topic_duree_zone = {"ha/arrosage/Z1/duree":"Z1", 
-                   "ha/arrosage/Z2/duree":"Z2",
-                   "ha/arrosage/Z3/duree":"Z3", 
-                   "ha/arrosage/Z4/duree":"Z4",
-                   "ha/arrosage/Z5/duree":"Z5", 
-                   "ha/arrosage/Z6/duree":"Z6",
-                   "ha/arrosage/Z7/duree":"Z7", 
-                   "ha/arrosage/Z8/duree":"Z8",
-                   "ha/arrosage/Z9/duree":"Z9", 
-                   "ha/arrosage/Z10/duree":"Z10",
-                   "ha/arrosage/Z11/duree":"Z11", 
-                   "ha/arrosage/Z12/duree":"Z12",
-                   "ha/arrosage/Z13/duree":"Z13", 
-                   "ha/arrosage/Z14/duree":"Z14",
-                   "ha/arrosage/Z15/duree":"Z15", 
-                   "ha/arrosage/Z16/duree":"Z16",
-                   "ha/arrosage/Z17/duree":"Z17", 
-                   "ha/arrosage/Z18/duree":"Z18",
-                   "ha/arrosage/Z19/duree":"Z19", 
-                   "ha/arrosage/Z20/duree":"Z20",
-                   "ha/arrosage/Z21/duree":"Z21", 
-                   "ha/arrosage/Z22/duree":"Z22"
-                   }
+	subscribe_topics = []
+	for type_topic,topic_name,field_name,table_name in list_topics:
+		topic = topic_name
+		subscribe_topics.append(topic)
+	logger.debug("Topics to subscribe :")
+	logger.debug(subscribe_topics)
+	for topic in subscribe_topics:
+		logger.debug(topic)
 
-topics = []
-for topic_name,field_name in topic_field_param.items():
-    topic = (topic_name,1)
-    topics.append(topic)
+	# Fonction appelée lorsque le client reçoit un message d'un sujet auquel il est abonné
+	# prevoir un publish sur topic state pour 2025 apres reception du susbscribe 
+	def on_message(client, userdata, message):
+		msg_payload = str(message.payload.decode("utf-8")).strip()
+		msg_topic = message.topic
+		if msg_topic[:19] != 'ha/arrosage/status/' and msg_topic[:13] != 'ha/arrosage/Z' and msg_topic[:13] != 'ha/arrosage/S':
+			logger.info(f'topic : {msg_topic} value :{msg_payload}')
+		#print("Message reçu sur le sujet '" + message.topic + "': ", str(message.payload.decode("utf-8")))
+		if msg_topic=="ha/arrosage/status/restart" and msg_payload=='restart':
+			logger.info("restart")
+			LogDatabase(msg_topic.replace('ha/arrosage/',''),msg_payload,'','','mqtt',logger)
+			RestartRpi(logger)
+		else:
+			if msg_topic=="ha/arrosage/status/test_relais" and msg_payload=='test_relais':
+				logger.info("test_relais")
+				LogDatabase(msg_topic.replace('ha/arrosage/',''),msg_payload,'','','mqtt',logger)
+				LaunchTestRelais(logger)
+			else:
+				if msg_payload != '':
+					for type_topic,topic_name,field_name,table_name in list_topics:
+						if msg_topic==topic_name and type_topic[:1] in ['Z','S']:
+							field_filter = "sv" if type_topic[:1]=='Z' else "Seq"
+							LogDatabase(msg_topic.replace('ha/arrosage/',''),msg_payload,table_name,field_name,'mqtt',logger)
+							UpdateData(table_name,field_name,msg_payload,field_filter,type_topic,type_topic[:1],logger)
+							logger.info(f'update topic : {topic_name} value : {msg_payload}')
+						else:
+							if msg_topic==topic_name and type_topic == 'param':
+								LogDatabase(msg_topic.replace('ha/arrosage/',''),msg_payload,table_name,field_name,'mqtt',logger)
+								UpdateData(table_name,field_name,msg_payload,'','',type_topic[:1],logger)
+								logger.info(f'update topic : {topic_name} value : {msg_payload}')
+				else:
+					logger.warning(f'Payload vide topic : {msg_topic}')
 
-for topic_name,field_name in topic_etat_zone.items():
-    topic = (topic_name,1)
-    topics.append(topic)
 
-for topic_name,field_name in topic_active_zone.items():
-    topic = (topic_name,1)
-    topics.append(topic)
+	def on_disconnect(client, userdata, rc):
+		logger.warning(f"Disconnected from MQTT broker ! return code rc : {rc}")
+		# Tenter de se reconnecter
+		while rc != 0:
+			logger.warning(f"Attempt to reconnect in 2 minutes ! code rc : {rc}")
+			time.sleep(120)
+			try:
+				client.reconnect()
+			except:
+				logger.warning(f"Reconnection problem ! code rc : {rc}")
+				pass
 
-for topic_name,field_name in topic_duree_zone.items():
-    topic = (topic_name,1)
-    topics.append(topic)
+	def on_log(client, userdata, level, buf):
+		logger.info(f"SYSTEM: {buf}")
 
-# Fonction maj données dans la bdd
-def UpdateParamBdd(field,value,debug):
-    try:
-        db = create_engine('mysql+mysqlconnector://{0}:{1}@{2}/{3}'.format(USER_BDD,PASSWORD_BDD,IP_BDD_SERVER,NAME_DATABASE), pool_recycle=3600)
-        bdd = db.connect()
-        sql = "update Parameter set {0}='{1}'".format(field,value)
-        bdd.execute(sql)
-        bdd.close()
-        if debug:
-            print("update Parameter set {0}='{1}'".format(field,value))
-        return True
-    except:
-        if debug:
-            print('Update KO for field : {0} valeur : {1} : MariaDb Problem @ {2}'.format(field,value,IP_BDD_SERVER))
-        return False
+	def on_connect(client, userdata, flags, rc, properties=None):
+		if rc==0:
+			logger.info("Connected to MQTT Broker")
+		else:
+			logger.error(f"Connection failed to MQTT Broker RC : {rc}")
 
-# Fonction maj données etat zone
-def UpdateZoneBdd(field,zone,value,debug):
-    try:
-        db = create_engine('mysql+mysqlconnector://{0}:{1}@{2}/{3}'.format(USER_BDD,PASSWORD_BDD,IP_BDD_SERVER,NAME_DATABASE), pool_recycle=3600)
-        bdd = db.connect()
-        sql = "update Zone set {0}='{2}' where sv='{1}'".format(field,zone,value)
-        bdd.execute(sql)
-        bdd.close()
-        if debug:
-            print("update Zone set {0}='{2}' where sv='{1}'".format(field,zone,value))
-        return True
-    except:
-        if debug:
-            print('Update KO : MariaDb Problem @ '+IP_BDD_SERVER)
-        return False
-
-# Fonction appelée lorsque le client reçoit un message d'un sujet auquel il est abonné
-def on_message(client, userdata, message):
-    #print("Message reçu sur le sujet '" + message.topic + "': ", str(message.payload.decode("utf-8")))
-    #parametre
-    for topic_name,field_name in topic_field_param.items():
-        if message.topic==topic_name:
-            UpdateParamBdd(field_name,str(message.payload.decode("utf-8")),DEBUG)
-    
-    #etatzone
-    for topic_name,zone in topic_etat_zone.items():
-        if message.topic==topic_name:
-            UpdateZoneBdd('open',zone,str(message.payload.decode("utf-8")),DEBUG)
-    
-    #activezone
-    for topic_name,zone in topic_active_zone.items():
-        if message.topic==topic_name:
-            UpdateZoneBdd('active',zone,str(message.payload.decode("utf-8")),DEBUG)
-
-    #dureezone
-    for topic_name,zone in topic_duree_zone.items():
-        if message.topic==topic_name:
-            UpdateZoneBdd('duration',zone,str(message.payload.decode("utf-8")),DEBUG)
-
-def on_disconnect(client, userdata, rc):
-    if rc != 0:
-        print("Unexpected disconnection.")
-        rc = client.reconnect()
-
-# Création d'un client MQTT
-client = mqtt.Client()
-# Connexion au serveur MQTT
-client.username_pw_set(USER_MQTT, PASSWORD_MQTT)
-client.connect(IP_MQTT_BROKER, PORT_MQTT)
-# Souscription à plusieurs sujets en utilisant un tuple pour spécifier les sujets et les niveaux de QoS
-client.subscribe(topics)
-# Indication de la fonction à appeler lors de la réception d'un message
-client.on_message = on_message
-#client.on_disconnect = on_disconnect
-client.reconnect_delay_set(60,60)
-# Boucle de traitement des messages
-client.loop_forever()
+	client = mqtt.Client(protocol = mqtt.MQTTv5)
+	client.username_pw_set(USER_MQTT, PASSWORD_MQTT)
+	client.connect(IP_MQTT_BROKER, PORT_MQTT)
+	#client.subscribe(subscribe_topics)
+	client.subscribe("ha/arrosage/#")
+	client.on_connect = on_connect
+	client.on_message = on_message
+	client.on_log = on_log
+	client.on_disconnect = on_disconnect
+	client.loop_forever(retry_first_connection=True)
+	#client.reconnect_delay_set(60,60)
+	#client.reconnect

@@ -1,0 +1,1772 @@
+2024-05-23 21:46:13,631 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:47:14,605 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:48:15,596 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:49:16,857 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:49:21,408 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:50:17,856 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:50:22,494 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:51:18,838 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:52:19,908 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:53:21,178 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:54:22,168 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 21:55:23,198 - ERROR - UpdateCoef - Coef not updated
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 562, in UpdateCoef
+    logger.debug(f'Temperature Kpi : {temp} °C')
+NameError: name 'temp' is not defined
+2024-05-23 23:31:45,690 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-23 23:57:00,849 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 00:21:15,121 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 00:56:35,548 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 02:13:20,251 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 02:38:34,760 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 02:39:35,413 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 03:04:50,496 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 03:20:59,792 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 03:22:00,329 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 03:38:09,902 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 08:48:11,025 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 09:12:25,088 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 09:13:25,674 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 14:38:36,515 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)
+2024-05-24 14:39:37,137 - ERROR - LoadData - MariaDb Problem @ 192.168.1.123
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+mysql.connector.errors.DatabaseError: 1040: Too many connections
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 411, in LoadData
+    connection = db.connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3166, in connect
+    return self._connection_cls(self, close_with_result=close_with_result)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 96, in __init__
+    else engine.raw_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3245, in raw_connection
+    return self._wrap_pool_connect(self.pool.connect, _connection)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3216, in _wrap_pool_connect
+    e, dialect, self
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 2070, in _handle_dbapi_exception_noconnection
+    sqlalchemy_exception, with_traceback=exc_info[2], from_=e
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 3212, in _wrap_pool_connect
+    return fn()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 307, in connect
+    return _ConnectionFairy._checkout(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 767, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 425, in checkout
+    rec = pool._do_get()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 146, in _do_get
+    self._dec_overflow()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/impl.py", line 143, in _do_get
+    return self._create_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 253, in _create_connection
+    return _ConnectionRecord(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 368, in __init__
+    self.__connect()
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 611, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/langhelpers.py", line 72, in __exit__
+    with_traceback=exc_tb,
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/pool/base.py", line 605, in __connect
+    connection = pool._invoke_creator(self)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/create.py", line 578, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 584, in connect
+    return self.dbapi.connect(*cargs, **cparams)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/__init__.py", line 273, in connect
+    return MySQLConnection(*args, **kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 107, in __init__
+    self.connect(**kwargs)
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/abstracts.py", line 1003, in connect
+    self._open_connection()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 351, in _open_connection
+    self._do_handshake()
+  File "/home/pi/.local/lib/python3.7/site-packages/mysql/connector/connection.py", line 151, in _do_handshake
+    raise errors.get_exception(packet)
+sqlalchemy.exc.DatabaseError: (mysql.connector.errors.DatabaseError) 1040: Too many connections
+(Background on this error at: https://sqlalche.me/e/14/4xp6)

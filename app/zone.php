@@ -22,9 +22,9 @@
     <input type="hidden" id="idsv" name="idsv" value="<?php echo $_GET["zone"];?>" />
     <input type="hidden" id="typesv" name="typesv" value="<?php echo $_GET["type"];?>" />
     <div class="row">
-	<div class="col-md-12">
-			<button type="submit" class="btn btn-primary">Maj</button>	
-	</div>
+        <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Maj</button>	
+        </div>
     </div>
 
     <div class="row">
@@ -65,7 +65,7 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="numero">Numéro : <span id="numerovalue"></span> #</label>
-                <input type="range" min="1" max="40" value="" step="1" class="form-control slider" id="numero" name="numero">
+                <input type="range" min="1" max="22" value="" step="1" class="form-control slider" id="numero" name="numero">
             </div>
         </div>
     </div>
@@ -73,10 +73,11 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="sequence">Numero Sequence 1 ou 2 : <span id="sequencevalue"></span></label>
+                <label for="sequence">Sequence : <span id="sequencevalue"></span></label>
                 <select id="sequence" name="sequence" class="form-select">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
                 </select>
             </div>
         </div>
@@ -94,21 +95,27 @@
         <div class="col-md-12">
             <div class="form-group">
                 <label for="duree">Durée : <span id="dureevalue"></span> Minutes</label>
-                <input type="range" min="2" max="120" value="" step="1" class="form-control slider" id="duree" name="duree">
+                <input type="range" min="2" max="180" value="" step="1" class="form-control slider" id="duree" name="duree">
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="coeff">Coefficient Durée : <span id="coeffvalue"></span> %</label>
-                <input type="range" min="10" max="300" value="" step="5" class="form-control slider" id="coeff" name="coeff">
+                <label for="coef">Coefficient Durée : <span id="coefvalue"></span> %</label>
+                <input type="range" min="10" max="300" value="" step="5" class="form-control slider" id="coef" name="coef">
             </div>
         </div>
     </div>
 
 
-
+    <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="checkbox-inline">Tous les jours : <input type="checkbox"  id="touslesjours" name="touslesjours" value="yes" checked="true"></label>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="form-group">
@@ -193,9 +200,9 @@
 			
 
 		</form>
-        </div>
+    </div>
 
-		</div>
+	</div>
 		<script src="js/jquery.js"></script>
 		<script src="js/zone.js"></script>
 	</body>

@@ -21,7 +21,7 @@ $(document).ready(function(){
         var gpio = data[0].gpio;
         var nom = data[0].name;
         var seq = data[0].sequence;
-        var coeff = data[0].coef;
+        var coef = data[0].coef;
         var duree = data[0].duration;
         var numero = data[0].order;
         
@@ -50,8 +50,8 @@ $(document).ready(function(){
         $("#duree").val(duree);
         $("#dureevalue").text(duree);
         
-        $("#coeff").val(coeff);
-        $("#coeffvalue").text(coeff);
+        $("#coef").val(coef);
+        $("#coefvalue").text(coef);
 
         $("#numero").val(numero);
         $("#numerovalue").text(numero);
@@ -97,6 +97,14 @@ $(document).ready(function(){
         }else{
           $("#dimanche").prop('checked', false);
         }
+        
+        var week = lundi+mardi+mercredi+jeudi+vendredi+samedi+dimanche;
+        if (week == 7){
+          $("#touslesjours").prop('checked', true);
+        }else{
+          $("#touslesjours").prop('checked', false);
+        }
+        
         if (even == 1){
           $("#even").prop('checked', true);
         }else{
@@ -121,8 +129,8 @@ $(document).ready(function(){
       $("#dureevalue").text(this.value);
     });
 
-    $("#coeff").on("input",function() {
-      $("#coeffvalue").text(this.value);
+    $("#coef").on("input",function() {
+      $("#coefvalue").text(this.value);
     });
 
     $("#numero").on("input",function() {

@@ -14,11 +14,10 @@ $(document).ready(function(){
         var mode = data[0].mode;
         var source = data[0].source;
         var dp = data[0].delta_pression_filtre_max;
-        var sh = data[0].heure_debut_sequence;
-        var shd = data[0].heure_debut_sequence_demande;
-        var mi = data[0].minute_debut_sequence;
-        var mid = data[0].minute_debut_sequence_demande;
-        var coef = data[0].duree_coef;
+        var shd = data[0].heure_demande;
+        var mid = data[0].minute_demande;
+        var seqd = data[0].sequence_demande;
+        var coef = data[0].coef;
         var mp = data[0].pression_seuil_bas;
         var max = data[0].pression_seuil_haut;
         
@@ -27,6 +26,9 @@ $(document).ready(function(){
         var ocip = data[0].test_pression_ville;
         var otp = data[0].test_pression_cuve;
 
+        var gpca = data[0].gestion_pompe_canal;
+        var gpcu = data[0].gestion_pompe_cuve;
+
         var at = data[0].gestion_cuve;
         var oh = data[0].test_hauteur_eau_cuve;
         var nc = data[0].nb_cuve_ibc;
@@ -34,19 +36,34 @@ $(document).ready(function(){
         var mic = data[0].seuil_min_capacite_cuve;
         var mac = data[0].seuil_max_capacite_cuve;
         var tt = data[0].seuil_capacite_remplissage_auto_cuve;
+        var autocoef = data[0].auto_coef
+        var kpiautocoef = data[0].kpi_auto_coef
+        var nbmaxsv =  data[0].nb_max_sv
+        var vnbmaxsv = data[0].verif_nb_max_sv
+        var precipitation = data[0].precipitation
+        var nbjourprecipitation = data[0].nb_jour_precipitation
+        var seuilprecipitation = data[0].seuil_precipitation
+        var vseqhour = data[0].verif_seq_hour
+
+        $("#nbmaxsv").val(nbmaxsv);
+        $("#nbmaxsvvalue").text(nbmaxsv);
+
+        $("#nbjourprecipitation").val(nbjourprecipitation);
+        $("#nbjourprecipitationvalue").text(nbjourprecipitation);
+
+        $("#seuilprecipitation").val(seuilprecipitation);
+        $("#seuilprecipitationvalue").text(seuilprecipitation);
 
         $("#mode").val(mode);
         //$("#modevalue").text(mode);
         $("#source").val(source);
+        
+        $("#kpiautocoef").val(kpiautocoef);
 
-        $("#heure").val(sh);
-        $("#heurevalue").text(sh);
+        $("#sequencedemande").val(seqd);
 
         $("#heuredemande").val(shd);
         $("#heuredemandevalue").text(shd);
-
-        $("#minute").val(mi);
-        $("#minutevalue").text(mi);
 
         $("#minutedemande").val(mid);
         $("#minutedemandevalue").text(mid);
@@ -81,6 +98,30 @@ $(document).ready(function(){
         $("#seuilautocuve").val(tt);
         $("#seuilautocuvevalue").text(tt);
 
+        if (precipitation == 1){
+          $("#precipitation").prop('checked', true);
+        }else{
+          $("#precipitation").prop('checked', false);
+        }
+
+        if (vseqhour == 1){
+          $("#verifseqhour").prop('checked', true);
+        }else{
+          $("#verifseqhour").prop('checked', false);
+        }
+
+        if (vnbmaxsv == 1){
+          $("#verifnbmaxsv").prop('checked', true);
+        }else{
+          $("#verifnbmaxsv").prop('checked', false);
+        }
+
+        if (autocoef == 1){
+          $("#autocoef").prop('checked', true);
+        }else{
+            $("#autocoef").prop('checked', false);
+        
+        }
 
         if (ocp == 1){
             $("#overcanalpressure").prop('checked', true);
@@ -117,12 +158,35 @@ $(document).ready(function(){
       
         }
 
+        if (gpca == 1){
+          $("#pompecanal").prop('checked', true);
+        }else{
+          $("#pompecanal").prop('checked', false);
+      
+        }
+
+        if (gpcu == 1){
+          $("#pompecuve").prop('checked', true);
+        }else{
+          $("#pompecuve").prop('checked', false);
+      
+        }
+
       }
     });
 
     // update sliders value on input/change
+
     $("#testduration").on("input",function() {
       $("#testdurationvalue").text(this.value);
+    });    
+
+    $("#nbjourprecipitation").on("input",function() {
+      $("#nbjourprecipitationvalue").text(this.value);
+    });   
+
+    $("#seuilprecipitation").on("input",function() {
+      $("#seuilprecipitationvalue").text(this.value);
     });
 
     $("#coef").on("input",function() {
@@ -141,17 +205,11 @@ $(document).ready(function(){
         $("#deltapressurevalue").text(this.value);
     });
 
-    $("#heure").on("input",function() {
-      $("#heurevalue").text(this.value);
-    });
 
     $("#heuredemande").on("input",function() {
       $("#heuredemandevalue").text(this.value);
     });
 
-    $("#minute").on("input",function() {
-        $("#minutevalue").text(this.value);
-    });
   
     $("#minutedemande").on("input",function() {
         $("#minutedemandevalue").text(this.value);
@@ -181,6 +239,9 @@ $(document).ready(function(){
     });
 
 
+    $("#nbmaxsv").on("input",function() {
+      $("#nbmaxsvvalue").text(this.value);
+    });
 
     //---------------------
     // Modify global parameter
@@ -192,7 +253,7 @@ $(document).ready(function(){
       var form = $(this).serialize();
       console.log("form : "+form);
       $.post("update_parameter.php",form,function(data){
-          console.log(data);
+          //console.log(data);
           if (data == "ok") {
             window.location = "arrosage.html";
           }else{

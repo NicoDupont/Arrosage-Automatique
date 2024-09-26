@@ -1,0 +1,6 @@
+2024-09-06 21:36:45,156 - INFO - Watering - Manual activation Solenoid valve : Z14
+2024-09-06 21:36:47,198 - INFO - Watering - Manual activation Solenoid valve : Z18
+2024-09-06 21:37:10,925 - INFO - Watering - Manual activation Solenoid valve : Z2
+2024-09-06 21:39:13,890 - INFO - Watering - Deactivation of the solenoid valve on Stop Mode : Z2
+2024-09-06 21:39:15,009 - INFO - Watering - Deactivation of the solenoid valve on Stop Mode : Z14
+2024-09-06 21:39:16,014 - INFO - Watering - Deactivation of the solenoid valve on Stop Mode : Z18

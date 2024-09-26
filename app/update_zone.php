@@ -1,33 +1,8 @@
 <?php
-  require('/home/pi/vendor/autoload.php');
-
-  use \PhpMqtt\Client\MqttClient;
-  use \PhpMqtt\Client\ConnectionSettings;
-
-  include 'config.php';
-
-  function ConnectMqtt($user,$pass,$server,$port){
-      $connectionSettings = new ConnectionSettings();
-      $connectionSettings = $connectionSettings
-              ->setUsername($user)
-              ->setPassword($pass);
-      $mqtt = new MqttClient($server, $port, 'mqttphp');
-      $mqtt->connect($connectionSettings);
-      return $mqtt;
-  }
-
-  function DisconnectMqtt($session){
-      $session->disconnect();
-  }
-  
-  function PublishMqtt ($session,$topic,$payload,$qos,$retain){
-      $session->publish($topic,$payload,$qos,$retain);
-
-  }
-
-  ini_set('display_errors', 5);
-
+  //ini_set('display_errors', 5);
   if($_POST){
+
+    include 'config.php';
     date_default_timezone_set("Europe/Paris");
     
     $idsv = $_POST['idsv'];
@@ -38,16 +13,8 @@
     $gpio = $_POST['gpio'];
     $seq = $_POST['sequence'];
     $dur = $_POST['duree'];
-    $coef = $_POST['coeff'];
+    $coef = $_POST['coef'];
     
-    //$mon = $_POST['lundi'];
-    //$tue = $_POST['mardi'];
-    //$wed = $_POST['mercredi'];
-    //$thu = $_POST['jeudi'];
-    //$fri = $_POST['vendredi'];
-    //$sat = $_POST['samedi'];
-    //$sun = $_POST['dimanche'];
-
     if (isset($_POST['active']) && $_POST['active'] == 'yes'){ $act = 1; } else{ $act = 0; }
     if (isset($_POST['open']) && $_POST['open'] == 'yes'){ $opn = 1; } else{ $opn = 0; }
     if (isset($_POST['lundi']) && $_POST['lundi'] == 'yes'){ $mon = 1;} else{ $mon = 0; }
@@ -57,6 +24,7 @@
     if (isset($_POST['vendredi']) && $_POST['vendredi'] == 'yes'){ $fri = 1;} else{ $fri = 0; }
     if (isset($_POST['samedi']) && $_POST['samedi'] == 'yes'){ $sat = 1;} else{ $sat = 0; }
     if (isset($_POST['dimanche']) && $_POST['dimanche'] == 'yes'){ $sun = 1;} else{ $sun = 0; }
+    if (isset($_POST['touslesjours']) && $_POST['touslesjours'] == 'yes'){ $tlj = 1;} else{ $tlj = 0; }
     if (isset($_POST['even']) && $_POST['even'] == 'yes'){ $even = 1;} else{ $even = 0; }
     if (isset($_POST['odd']) && $_POST['odd'] == 'yes'){ $odd = 1;} else{ $odd = 0; }
     
@@ -70,55 +38,64 @@
       $sat = 0;
     }
 
-    $con=mysqli_connect($host, $user, $pass, $bdd);
-    if (mysqli_connect_errno()) {
-    	echo "Failed to connect to MySQL: " . mysqli_connect_error();
-      //echo "ko";
-    }else { //bdd ok
-
-      
-        //select actual data
-        $result = mysqli_query($con,"select sv,open,active,duration from Zone where id_sv='".$idsv."' limit 1;");
-        $row = mysqli_fetch_assoc($result);
-        //publish mqtt
-        if ($row["open"] != $opn or $row["duration"] != $dur or $row["active"] != $act) {
-         $mqttsession = ConnectMqtt($usermqtt,$passmqtt,$servermqtt,$portmqtt);
-          if ($row["open"] != $opn)     {PublishMqtt ($mqttsession,"ha/arrosage/".$row["sv"]."/etat",$opn,1,true);}
-          if ($row["active"] != $act)   {PublishMqtt ($mqttsession,"ha/arrosage/".$row["sv"]."/active",$act,1,true);}
-          if ($row["duration"] != $dur) {PublishMqtt ($mqttsession,"ha/arrosage/".$row["sv"]."/duree",$dur,1,true);}
-          DisconnectMqtt($mqttsession);
-        }
-
-        // update parameters for single sv
-
-          $sql = "UPDATE Zone SET 
-          `order` = '".$order."' 
-          , duration = '".$dur."'
-          , sv = '".$code."' 
-          , name = '".$nom."' 
-          , sequence = '".$seq."' 
-          , gpio = '".$gpio."' 
-          , active = '".$act."' 
-          , open = '".$opn."' 
-          , even = '".$even."' 
-          , odd = '".$odd."' 
-          , coef = '".$coef."'
-          , monday='".$mon."'
-          , tuesday='".$tue."'
-          , wednesday='".$wed."'
-          , thursday='".$thu."'
-          , friday='".$fri."'
-          , saturday='".$sat."'
-          , sunday='".$sun."'
-           where id_sv='".$idsv."'
-          ";
-        
-      	mysqli_query($con,$sql);
-        mysqli_close($con);
-        echo "ok";
-        //echo $sql;
+    if ($even == 0 && $odd == 0 && $tlj == 1){
+      $mon = 1;
+      $tue = 1;
+      $wed = 1;
+      $thu = 1;
+      $fri = 1;
+      $sun = 1;
+      $sat = 1;
     }
 
+    try
+      {
+        $bdd = new PDO("mysql:host=$host;dbname=$bdd;charset=utf8", $user, $pass);
+        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      }
+    catch(Exception $e)
+      {
+         die('Erreur : '.$e->getMessage());
+      }
+            
+    //bdd ok
+    $qry = $bdd->prepare("select sv,open,active,duration,sequence,`order`,gpio,even,odd,coef from Zone where id_sv='".$idsv."' limit 1;");
+    $qry->execute();
+    $data = $qry->fetchAll(PDO::FETCH_ASSOC);
+    $row = $data[0];
+
+    //mqtt
+    if ($row["open"] != $opn or $row["duration"] != $dur or $row["active"] != $act or $row["sequence"] != $seq 
+        or $row["order" ] != $act or $row["gpio"] != $gpio or $row["even"] != $even  or $row["coef"] != $coef) {
+      
+      $mqttsession = ConnectMqtt($usermqtt,$passmqtt,$servermqtt,$portmqtt);
+
+      if ($row["open"] != $opn)     {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/etat".$suffix_mqtt,$opn,1,true);}
+      if ($row["active"] != $act)   {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/active".$suffix_mqtt,$act,1,true);}
+      if ($row["duration"] != $dur) {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/duree".$suffix_mqtt,$dur,1,true);}
+      if ($row["sequence"] != $seq) {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/sequence".$suffix_mqtt,$seq,1,true);}
+      if ($row["order"] != $order)  {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/ordre".$suffix_mqtt,$order,1,true);}
+      if ($row["gpio"] != $gpio)    {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/gpio".$suffix_mqtt,$gpio,1,true);}
+      if ($row["even"] != $even)    {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/even".$suffix_mqtt,$even,1,true);}
+      if ($row["odd"] != $odd)      {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/odd".$suffix_mqtt,$odd,1,true);}
+      if ($row["coef"] != $coef)    {PublishMqtt ($mqttsession,$prefix_mqtt."/".$device_mqtt."/".$row["sv"]."/coef".$suffix_mqtt,$coef,1,true);}
+      
+      DisconnectMqtt($mqttsession);
+    }
+
+    // update parameters for single zone
+    $sql = "UPDATE Zone SET `order` = '".$order."' , duration = '".$dur."', sv = '".$code."' , name = '".$nom."' 
+          , sequence = '".$seq."' , gpio = '".$gpio."' , active = '".$act."' , open = '".$opn."' , even = '".$even."' 
+          , odd = '".$odd."' , coef = '".$coef."', monday='".$mon."', tuesday='".$tue."', wednesday='".$wed."'
+          , thursday='".$thu."', friday='".$fri."', saturday='".$sat."', sunday='".$sun."' where id_sv='".$idsv."';";
+    $qry = $bdd->prepare(  $sql);
+    $qry->execute();
+
+    $qry = null;
+    $bdd = null;
+    echo "ok";
+      //echo $sql;
+  
 }else {  //post ko
     echo "ko post";
 }

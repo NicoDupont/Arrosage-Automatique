@@ -1,0 +1,600 @@
+2024-06-23 20:21:48,818 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+socket.timeout: timed out
+2024-06-23 20:21:51,997 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,005 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,014 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,019 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,025 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,064 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,071 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,076 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,550 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,555 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,558 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,562 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:52,565 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,050 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,055 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,060 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,064 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,069 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,072 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,077 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,081 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,086 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,090 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,094 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,099 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,103 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,107 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,112 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,116 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,121 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,128 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,133 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,137 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,142 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,146 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,151 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,155 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,159 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+2024-06-23 20:21:53,162 - ERROR - PublishMqtt - Probleme with Mqtt to publish data
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 170, in PublishMqtt
+    client.connect(host=IP_MQTT_BROKER,port=PORT_MQTT) #connect to broker
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 914, in connect
+    return self.reconnect()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 1044, in reconnect
+    sock = self._create_socket_connection()
+  File "/usr/local/lib/python3.7/dist-packages/paho/mqtt/client.py", line 3685, in _create_socket_connection
+    return socket.create_connection(addr, timeout=self._connect_timeout, source_address=source)
+  File "/usr/lib/python3.7/socket.py", line 727, in create_connection
+    raise err
+  File "/usr/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused

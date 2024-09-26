@@ -40,6 +40,7 @@
                     <option value="Stop">Stop</option>
                     <option value="Demande">Demande</option>
                     <option value="Domotique">Domotique</option>
+                    <option value="Weather">Weather</option>
                 </select>
             </div>
         </div>
@@ -68,24 +69,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="heure">Heure Début : <span id="heurevalue"></span> Heure</label>
-                <input type="range" min="0" max="23" value="" step="1" class="form-control slider" id="heure" name="heure">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label for="minute">Minute Début : <span id="minutevalue"></span> Minute</label>
-                <input type="range" min="0" max="59" value="" step="1" class="form-control slider" id="minute" name="minute">
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <label for="heuredemande">Minute Début : <span id="heuredemandevalue"></span> Heure Demande</label>
+                <label for="heuredemande">Heure Demande : <span id="heuredemandevalue"></span> H</label>
                 <input type="range" min="0" max="23" value="" step="1" class="form-control slider" id="heuredemande" name="heuredemande">
             </div>
         </div>
@@ -93,12 +77,24 @@
     <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="minutedemande">Minute Début : <span id="minutedemandevalue"></span> Minute Demande</label>
+                <label for="minutedemande">Minute Demande : <span id="minutedemandevalue"></span> Min</label>
                 <input type="range" min="0" max="59" value="" step="1" class="form-control slider" id="minutedemande" name="minutedemande">
             </div>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="sequencedemande">Sequence Demande : <span id="sequencedemandevalue"></span></label>
+                <select id="sequencedemande" name="sequencedemande" class="form-select">
+                    <option value="S1">S1</option>
+                    <option value="S2">S2</option>
+                    <option value="S3">S3</option>
+                </select>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-12">
@@ -217,10 +213,88 @@
 					</div>
 				</div>
 			</div>
-           
-
-            
-			
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="checkbox-inline">Gestion Pompe Canal : <input type="checkbox"  id="pompecanal" name="pompecanal" value="yes" checked="true"></label>
+                        <!--<input type="hidden" name="ifttt" value="0" />-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="checkbox-inline">Gestion Pompe Cuve : <input type="checkbox"  id="pompecuve" name="pompecuve" value="yes" checked="true"></label>
+                        <!--<input type="hidden" name="ifttt" value="0" />-->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="checkbox-inline">Calcul Auto Coef : <input type="checkbox"  id="autocoef" name="autocoef" value="yes" checked="true"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="kpiautocoef">Kpi Calcul Auto Coef : <span id="kpiautocoefvalue"></span></label>
+                        <select id="kpiautocoef" name="kpiautocoef" class="form-select">
+                            <option value="Max">Max</option>
+                            <option value="Moyenne">Moyenne</option>
+                            <option value="90Percentile">90Percentile</option>
+                            <option value="80Percentile">80Percentile</option>
+                            <option value="70Percentile">70Percentile</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="checkbox-inline">Verif Ordre Zone : <input type="checkbox"  id="verifnbmaxsv" name="verifnbmaxsv" value="yes" checked="true"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="nbmaxsv">Seuil Maximum Zone Active : <span id="nbmaxsvvalue"></span></label>
+						<input type="range" min="1" max="5" value="" step="1" class="form-control slider" id="nbmaxsv" name="nbmaxsv">
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="checkbox-inline">Test Précipitation : <input type="checkbox"  id="precipitation" name="precipitation" value="yes" checked="true"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="nbmaxsv">Nombre de jour pour le cumul des Précipitation : <span id="nbjourprecipitationvalue"></span> jour</label>
+						<input type="range" min="1" max="5" value="" step="1" class="form-control slider" id="nbjourprecipitation" name="nbjourprecipitation">
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label for="nbmaxsv">Seuil Minimum de Précipitation : <span id="seuilprecipitationvalue"></span> mm</label>
+						<input type="range" min="1" max="20" value="" step="1" class="form-control slider" id="seuilprecipitation" name="seuilprecipitation">
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label class="checkbox-inline">Test Debut / Fin Sequence : <input type="checkbox"  id="verifseqhour" name="verifseqhour" value="yes" checked="true"></label>
+                    </div>
+                </div>
+            </div>
 			
 		</form>
         </div>

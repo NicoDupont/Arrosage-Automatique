@@ -1,0 +1,936 @@
+2024-06-16 21:01:33,165 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:03:35,182 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:05:31,541 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:07:33,589 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:09:35,538 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:11:38,740 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:13:41,852 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:15:43,781 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:17:45,728 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:19:47,590 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:21:49,537 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:23:51,644 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    for i in range(0,nb_day):
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:25:53,718 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    for i in range(0,nb_day):
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:27:55,677 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    for i in range(0,nb_day):
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:29:57,574 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    for i in range(0,nb_day):
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:31:59,434 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    for i in range(0,nb_day):
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:34:01,315 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    for i in range(0,nb_day):
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:36:03,129 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    try:
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:38:05,069 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    try:
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:40:06,976 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    def GetTotalPrecipitation(apikey,latitude,longitude,logger,nb_day=2) -> float:
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:42:08,814 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    def GetTotalPrecipitation(apikey,latitude,longitude,logger,nb_day=2) -> float:
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:44:10,963 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    def GetTotalPrecipitation(apikey,latitude,longitude,logger,nb_day=2) -> float:
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:46:12,927 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:48:14,850 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    finally:
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:50:16,830 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    finally:
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:52:18,684 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:54:20,659 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:56:22,566 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 21:58:24,647 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:00:26,585 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    logger.exception('Erreur GetPrecipitationByDay')
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:02:28,450 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:04:30,328 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:05:41,480 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 776, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:06:32,258 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:07:02,568 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 776, in GetTotalPrecipitation
+    day = datetime.today() + timedelta(days=-i)
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:08:34,185 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:09:42,208 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 778, in GetTotalPrecipitation
+    total_rain += GetPrecipitationByDay(apikey,latitude,longitude,day,logger)
+UnboundLocalError: local variable 'total_rain' referenced before assignment
+2024-06-16 22:10:36,185 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    day_rain = 0
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:10:37,345 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 760, in GetPrecipitationByDay
+    weather_history = requests.get(API_URL.format(key=apikey,
+NameError: name 'requests' is not defined
+2024-06-16 22:10:37,351 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 760, in GetPrecipitationByDay
+    weather_history = requests.get(API_URL.format(key=apikey,
+NameError: name 'requests' is not defined
+2024-06-16 22:12:38,270 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    logger.exception('Erreur GetPrecipitationByDay')
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-16 22:14:40,176 - ERROR - GetTotalPrecipitation - Erreur GetTotalPrecipitation
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 769, in GetTotalPrecipitation
+    logger.exception('Erreur GetPrecipitationByDay')
+AttributeError: module 'datetime' has no attribute 'today'
+2024-06-17 11:30:19,496 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 765, in GetPrecipitationByDay
+    weather_data = json.loads(weather_history.content.decode('utf-8'))
+  File "/usr/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2024-06-17 19:23:53,629 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:25:56,104 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:25:56,402 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:27:58,884 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:27:59,201 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:30:01,996 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:30:02,277 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:32:04,511 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:32:04,834 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:34:07,036 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:34:07,344 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:36:09,543 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:36:09,818 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:38:12,283 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:38:12,537 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:40:14,920 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:40:15,172 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:42:17,517 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:42:17,799 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:44:20,189 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:44:20,472 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:46:22,909 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:46:23,202 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:48:25,677 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:48:25,981 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:50:28,285 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:50:28,582 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:52:30,950 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:52:31,185 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:54:33,585 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:54:33,915 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:56:36,186 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:56:36,483 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:58:38,652 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 19:58:38,937 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:00:41,193 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:00:41,423 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:02:43,754 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:02:44,063 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:04:46,475 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:04:46,776 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:06:49,242 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:06:49,541 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:08:51,880 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:08:52,180 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:10:54,444 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:10:54,720 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:12:56,951 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:12:57,234 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:14:59,514 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:14:59,793 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:17:02,190 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:17:02,498 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:19:04,852 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:19:05,139 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:21:07,489 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:21:07,781 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:23:10,122 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:23:10,378 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:25:12,695 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:25:12,985 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:27:15,289 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:27:15,614 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:29:17,860 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:29:18,134 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:31:20,495 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:31:20,783 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:33:23,154 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:33:23,441 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:35:25,770 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:35:26,045 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:37:28,273 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:37:28,564 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:39:30,906 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:39:31,169 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:41:33,620 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:41:33,912 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:43:36,287 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:43:36,555 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:45:38,853 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:45:39,118 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:47:41,521 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:47:41,782 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:49:44,178 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:49:44,465 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:51:46,771 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:51:47,046 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:53:49,272 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:53:49,605 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:55:51,779 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:55:52,076 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:57:54,448 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:57:54,718 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:59:56,980 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 20:59:57,236 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:01:59,615 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:01:59,917 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:04:02,402 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:04:02,705 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:06:05,064 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:06:05,378 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:08:07,593 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:08:07,897 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:10:10,196 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:10:10,474 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:12:12,663 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:12:12,932 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:14:15,287 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:14:15,562 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:16:17,839 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:16:18,130 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:18:20,405 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:18:20,684 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:20:23,040 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:20:23,327 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:22:25,679 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:22:25,954 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:24:28,241 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:24:28,494 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:26:30,906 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:26:31,179 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:28:33,577 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:28:33,862 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:30:36,383 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:30:36,640 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:32:38,975 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:32:39,285 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:34:41,582 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:34:41,847 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:36:44,051 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:36:44,280 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:38:46,566 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:38:46,846 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:40:49,268 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:40:49,545 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:42:51,964 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:42:52,224 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:44:54,632 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:44:54,912 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:46:57,348 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:46:57,626 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:49:00,103 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:49:00,545 - ERROR - GetPrecipitationByDay - Erreur GetPrecipitationByDay
+Traceback (most recent call last):
+  File "/home/pi/arrosage/function.py", line 766, in GetPrecipitationByDay
+    day_rain = weather_data['precipitation']['total']
+KeyError: 'precipitation'
+2024-06-17 21:58:05,024 - INFO - <module> - Activation/desactivation de l arrosage selon les precipitations inactif

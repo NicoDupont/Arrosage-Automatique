@@ -1,0 +1,3 @@
+2024-06-23 00:03:52,084 - INFO - CheckTotalPrecipitation - Passage en mode auto => precipation < seuil
+2024-06-23 20:50:30,807 - WARNING - CheckTotalPrecipitation - Passage en mode Weather => precipation > seuil
+2024-06-24 00:02:03,011 - INFO - CheckTotalPrecipitation - Passage en mode auto => precipation < seuil

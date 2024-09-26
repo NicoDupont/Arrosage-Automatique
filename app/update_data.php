@@ -1,6 +1,6 @@
 <?php
-    // save data from HA
-    ini_set('display_errors', 5);
+    // save data from HA by http request
+    //ini_set('display_errors', 5);
     if($_POST){
 
         $type = $_POST['type'];
@@ -30,7 +30,9 @@
             $qry = $bdd->prepare('update Zone set :field=:data where sv=:sv');
             $qry->execute(array('data' => $data,  'sv' => $sv, 'field'=> $field));  
         }
-
+        
+        $qry = null;
+        $bdd = null;
       
     }
 ?>

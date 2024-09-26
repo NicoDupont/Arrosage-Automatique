@@ -2,7 +2,8 @@
     // save data sent by an arduino/esp8266 or a python script on rpi or another device..
     // ini_set('display_errors', 5);
     if($_POST){
-
+        date_default_timezone_set("Europe/Paris");
+        include 'config.php';
         $id_sensor = $_POST['id'];
         $mesure = $_POST['data'];
 
@@ -10,8 +11,6 @@
         $mysql_ts = date("Y-m-d H:i:s", time()); 
 
         if(isset($mesure) && isset($id_sensor)  && !empty($mesure) && !empty($id_sensor)) {
-            
-            include 'config.php';
             try
             {
                 $bdd = new PDO("mysql:host=$host;dbname=$bdd;charset=utf8", $user, $pass);
@@ -42,6 +41,8 @@
                 $qry->execute(array('id_sensor' => $id_sensor,  'mesure' => $mesure));
                 //echo 'case2';
             } 
+            $qry = null;
+            $bdd = null;
             
 
         }
